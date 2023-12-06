@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Login & Registration Form</title>
+  <title>Login & Registration</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,11 +12,16 @@
     <input type="checkbox" id="check">
     <div class="login form">
       <header>Нэвтрэх</header>
-      <form action="#">
+      <form id="loginForm" action="#">
         <input type="text" placeholder="И-Мэйл">
         <input type="password" placeholder="Нууц үг">
         <a href="#">Нууц үгээ мартсан?</a>
-        <input type="button" class="button" value="Login">
+        <a href="../index.html">
+
+        <input type="button" class="button" value="Login" onclick="login()">
+
+
+        </a>
       </form>
       <div class="signup">
         <span class="signup">бүртгэлгүй бол?
@@ -26,11 +31,11 @@
     </div>
     <div class="registration form">
       <header>Бүртгүүлэх</header>
-      <form action="#">
-        <input type="text" placeholder="И-Мэйл ">
-        <input type="password" placeholder="Нууц үг үүсгэх">
-        <input type="password" placeholder="Нууц үгээ баталгаажуулах">
-        <input type="button" class="button" value="Бүртгүүлэх">
+      <form id="signupForm">
+        <input type="text" id="email" placeholder="И-Мэйл">
+        <input type="password" id="password" placeholder="Нууц үг үүсгэх">
+        <input type="password" id="confirmPassword" placeholder="Нууц үгээ баталгаажуулах">
+        <input type="button" class="button" value="Бүртгүүлэх" onclick="signup()">
       </form>
       <div class="signup">
         <span class="signup">Бүртгэлтэй бол?
@@ -39,5 +44,9 @@
       </div>
     </div>
   </div>
+  <script src="../fetch//post/loginPost.js"></script>
+  <script src="../fetch/post/registerPost.js"></script>
+</body>
+
 </body>
 </html>
